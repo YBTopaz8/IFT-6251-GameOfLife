@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameOfLife.MainPage"
+             xmlns:graphics="clr-namespace:Microsoft.Maui.Graphics;assembly=Microsoft.Maui"
+             xmlns:MSSkia="clr-namespace:Microsoft.Maui.Graphics.Skia;assembly=Microsoft.Maui.Graphics.Skia">
+
+    <VerticalStackLayout Spacing="10" Margin="10,0">
+        
+        <GraphicsView x:Name="gameView" HeightRequest="{OnPlatform Android= 400, WinUI=700}" 
+                      WidthRequest="{OnPlatform Android= 400, WinUI=700}"/>
+
+        <ProgressBar x:Name="progressBar"
+                     HeightRequest="40"
+                     ProgressColor="Red"
+                     HorizontalOptions="FillAndExpand"/>
+        <Label x:Name="prog"/>
+        <Button Text="Start" Clicked="OnStartClicked"/>
+        <Button Text="Stop" Clicked="OnStopClicked"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
